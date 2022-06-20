@@ -1,1 +1,3 @@
-arr = [1, 2, 0]
+else if ( arr[i + 1] == undefined ) {
+            console.log("Missing integer: ", arr[i] + 1);
+        }
