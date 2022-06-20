@@ -8,11 +8,10 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 You can modify the input array in-place. */
 
 
-/* arr = [3, 4, -1, 1] */
-arr = [1, 2, 0]
+arr = [3, 4, -1, 1]
+/* arr = [1, 2, 0] */
 
 /* First sort the array */
-
 arr.sort((a, b) => {  return a - b;  });
 
 for (let i = 0; i < arr.length; i++) {
@@ -20,15 +19,12 @@ for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= 0) {
 
         /* Substract each element from the one in the next position */
-        /* if result is greater than 1, return the substracted number + 1 */
-        if ( arr[i + 1] - arr[i] > 1 ) {
+        /* if result is greater than 1, return the substracted number + 1 also do that if you reach the end of the array without logging a result*/
+        if ( arr[i + 1] - arr[i] > 1 || arr[i + 1] == undefined ) {
             console.log("Missing integer: ", arr[i] + 1);
             break
 
-        /* also do that if you reach the end of the array without logging a result */
-        } else if ( arr[i + 1] == undefined ) {
-            console.log("Missing integer: ", arr[i] + 1);
-        }
+        } 
 
     }
     
